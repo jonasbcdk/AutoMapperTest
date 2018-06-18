@@ -10,12 +10,13 @@ namespace AutoMapperTest
     {
         static void Main(string[] args)
         {
+            // Init
+            AutoMapper.Mapper.Initialize(config => config.CreateMap<ComplexPerson, SimplePerson>());
+            
             var complex = new ComplexPerson();
             complex.FirstName = "Peter";
             complex.LastName = "Larsen";
             complex.City = "Aalborg";
-
-            AutoMapper.Mapper.Initialize(config => config.CreateMap<ComplexPerson, SimplePerson>());
 
             var simple = AutoMapper.Mapper.Map<SimplePerson>(complex);
 
