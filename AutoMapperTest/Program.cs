@@ -24,7 +24,7 @@ namespace AutoMapperTest
             Console.ReadLine();
         }
 
-        class ComplexPerson
+        public class ComplexPerson
         {
             public string FirstName;
             public string LastName;
@@ -33,7 +33,7 @@ namespace AutoMapperTest
             public string City;
         }
 
-        class SimplePerson
+        public class SimplePerson
         {
             public string FirstName;
             public string LastName;
